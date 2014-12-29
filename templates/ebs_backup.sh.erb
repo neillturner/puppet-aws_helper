@@ -1,15 +1,15 @@
-<% if @aws_access_key %>
-export AWS_ACCESS_KEY_ID=<%= @aws_access_key%>
+<% if @aws_access_key != '' %>
+export AWS_ACCESS_KEY_ID=<%= @aws_access_key %>
 <% end %>
-<% if @aws_secret_key %>
-export AWS_SECRET_ACCESS_KEY=<%= @aws_secret_key%>
+<% if @aws_secret_key != '' %>
+export AWS_SECRET_ACCESS_KEY=<%= @aws_secret_key %>
 <% end %>
-<% if @http_proxy %>
+<% if @http_proxy != '' %>
 export HTTP_PROXY=http://<%= @http_proxy %>
 <% end %>
 <%= @helper_path %>/aws_helper snap <%= @root_device %> <%= @root_vol %> --description '<%= @description %> root disk'  >> <%= @log %>
 <%= @helper_path %>/aws_helper snap_prune <%= @root_device %> <%= @root_vol %> --snapshots_to_keep=<%= @snapshots_to_keep %>  >> <%= @log %>
-<% if @attached_vol %>
+<% if @attached_vol != '' %>
 <%= @helper_path %>/aws_helper snap <%= @attached_device %> <%= @attached_vol %> --description '<%= @description %> attached data disk'  >> <%= @log %>
 <%= @helper_path %>/aws_helper snap_prune <%= @attached_device %> <%= @attached_vol %> --snapshots_to_keep=<%= @snapshots_to_keep %>  >> <%= @log %>
 <% end %>
