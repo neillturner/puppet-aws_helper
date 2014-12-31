@@ -28,8 +28,7 @@ class aws_helper::snap_email(
     owner   => root,
     group   => root,
     mode    => '0700',
-    content => template('aws_helper/snap_email.sh.erb'),
-    require => Package['aws_helper'],
+    content => template('aws_helper/snap_email.sh.erb')
   }
 
   cron::task{ $cron_description:

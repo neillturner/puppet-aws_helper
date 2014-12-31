@@ -29,8 +29,7 @@ class aws_helper::ebs_backup(
     owner   => root,
     group   => root,
     mode    => '0700',
-    content => template('aws_helper/ebs_backup.sh.erb'),
-    require => Package['aws_helper'],
+    content => template('aws_helper/ebs_backup.sh.erb')
   }
 
   cron::task{ 'ebs backup':
