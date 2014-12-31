@@ -6,4 +6,10 @@
 #
 class aws_helper
 {
+
+  package { 'aws_helper':
+    ensure   => 'installed',
+    provider => 'gem',
+  }
+
 }

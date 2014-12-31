@@ -10,7 +10,7 @@ class aws_helper::ebs_backup(
   $aws_access_key    = '',
   $aws_secret_key    = '',
   $http_proxy        = '',
-  $helper_path       = '/usr/bin/',
+  $helper_path       = '/usr/bin',
   $root_device       = '/dev/sda',
   $root_vol          = '',
   $attached_device   = '/dev/sdf',
@@ -23,11 +23,6 @@ class aws_helper::ebs_backup(
   $cron_hour         = '18',
   )
 {
-
-  package { 'aws_helper':
-    ensure   => 'installed',
-    provider => 'gem',
-  }
 
   file { "${script_path}/ebs_backup.sh":
     ensure  => 'file',
