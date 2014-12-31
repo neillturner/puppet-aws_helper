@@ -4,11 +4,12 @@
 # class parameters can be coded here or resolved
 # via the hiera parameter hierachy
 #
-class aws_helper
+class aws_helper(
+    $version => '0.0.4',
 {
 
   package { 'aws_helper':
-    ensure   => 'installed',
+    ensure   => $version,
     provider => 'gem',
   }
 
