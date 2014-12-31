@@ -7,4 +7,4 @@ export AWS_SECRET_ACCESS_KEY=<%= @aws_secret_key %>
 <% if @http_proxy != '' %>
 export HTTP_PROXY=<%= @http_proxy %>
 <% end %>
-<%= @helper_path %>/aws_helper snap_email <%= @to %> <%= @from %> <%= @email_server %> '<%= @subject %>' <%= @rows %>  >> <%= @log %>
+<%= @helper_path %>/aws_helper snap_email <%= @to %> <%= @from %> <%= @email_server %> '<%= @subject %>' --rows=<%= @rows %>  >> <%= @log %>
