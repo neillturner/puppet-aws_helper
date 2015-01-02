@@ -6,6 +6,7 @@
 #
 class aws_helper(
     $version = '0.0.4',
+)
 {
 
   package { 'aws_helper':
