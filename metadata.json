@@ -1,6 +1,6 @@
 {
   "name": "neillturner-aws_helper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "neillturner",
   "license": "Apache License, Version 2.0",
   "summary": "Aws Helper for an instance",
