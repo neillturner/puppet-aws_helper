@@ -5,7 +5,7 @@
 # via the hiera parameter hierachy
 #
 class aws_helper(
-    $version = '0.0.4',
+    $version = 'latest',
 )
 {
 
