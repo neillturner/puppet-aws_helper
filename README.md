@@ -53,6 +53,7 @@ If your server does not have a role then you need to code the AWS keys although 
      class { 'aws_helper::snap_email'
        aws_access_key    => 'xxxxxxxxxxxx',
        aws_secret_key    => 'yyyyyyyyyyy',
+       owner             => 999888777777,
        http_proxy        => 'http://10.20.30.40:3123',     
        cron_hour        => '3',
        to               => 'me@company.com',
