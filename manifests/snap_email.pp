@@ -8,6 +8,7 @@
 class aws_helper::snap_email(
   $aws_access_key    = '',
   $aws_secret_key    = '',
+  $owner             = '',
   $http_proxy        = '',
   $helper_path       = '/usr/bin',
   $to                = '',
