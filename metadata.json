@@ -5,8 +5,8 @@
   "license": "Apache License, Version 2.0",
   "summary": "Aws Helper for an instance",
   "source": "https://github.com/neillturner/puppet-aws_helper.git",
-  "project_page": "",
-  "issues_url": "",
+  "project_page": "https://github.com/neillturner/puppet-aws_helper",
+  "issues_url": "https://github.com/neillturner/puppet-aws_helper/issues",
   "operatingsystem_support": [
     {
     "operatingsystem":"RedHat",
