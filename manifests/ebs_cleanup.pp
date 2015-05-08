@@ -26,7 +26,7 @@ class aws_helper::ebs_cleanup(
     content => template('aws_helper/ebs_cleanup.sh.erb')
   }
 
-  cron::task{ 'ebs backup':
+  cron::task{ 'ebs cleanup':
     command => "${script_path}/ebs_cleanup.sh >> ${log}",
     minute  => $cron_minute,
     hour    => $cron_hour,
