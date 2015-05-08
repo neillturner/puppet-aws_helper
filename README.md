@@ -26,7 +26,7 @@ send an email at 3am giving a list of the last 20 snapshots.
      }
 
 Cleanup ebs disks - Delete old server root disks. Disks that are 8GB in size, not attached to a server,
-not tagged in any way and from a snapshot will be beleted.
+not tagged in any way and from a snapshot will be deleted.
 
      class { 'aws_helper::ebs_cleanup'
        cron_hour        => '19',
