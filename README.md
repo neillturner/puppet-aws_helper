@@ -4,6 +4,7 @@ Aws Helper for an instance
 
 Allows functions on EBS volumes, snapshots, IP addresses and more 
 * initially snapshots are supported
+* cleanup ebs volumes.
 
 ## Minimal Usage
 
@@ -22,6 +23,13 @@ send an email at 3am giving a list of the last 20 snapshots.
        to               => 'me@company.com',
        from             => 'ebs.backup@company.com',
        email_server     => 'smtpemailserver.com',
+     }
+
+Cleanup ebs disks - Delete old server root disks. Disks that are 8GB in size, not attached to a server,
+not tagged in any way and from a snapshot will be beleted.
+
+     class { 'aws_helper::ebs_cleanup'
+       cron_hour        => '19',
      }
 
 ## Complex Usage
