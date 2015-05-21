@@ -32,7 +32,7 @@ class aws_helper::snap_email(
     content => template('aws_helper/snap_email.sh.erb')
   }
 
-  cron::task{ $cron_description:
+  cron { $cron_description:
     command => "${script_path}/snap_email.sh >> ${log}",
     minute  => $cron_minute,
     hour    => $cron_hour,

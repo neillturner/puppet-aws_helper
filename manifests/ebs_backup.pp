@@ -32,7 +32,7 @@ class aws_helper::ebs_backup(
     content => template('aws_helper/ebs_backup.sh.erb')
   }
 
-  cron::task{ 'ebs backup':
+  cron { 'ebs backup':
     command => "${script_path}/ebs_backup.sh >> ${log}",
     minute  => $cron_minute,
     hour    => $cron_hour,
